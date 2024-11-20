@@ -2,7 +2,7 @@
 
 // When a Team is created in the Teams for WooCommerce Memberships plugin, Create a Group in BuddyPress with the same name and add the team owner as the Group admin
 
-add_action('team_created', 'create_buddypress_group_from_team', 10, 2);
+add_action('wc_memberships_for_teams_team_created', 'create_buddypress_group_from_team', 10, 2);
 
 function create_buddypress_group_from_team($team_id, $team_owner_id): void
 {
@@ -22,7 +22,7 @@ function create_buddypress_group_from_team($team_id, $team_owner_id): void
 
 // When a Team is deleted in the Teams for WooCommerce Memberships plugin, Delete the BuddyPress Group with the same name
 
-add_action('team_deleted', 'delete_buddypress_group_from_team', 10, 2);
+add_action('wc_memberships_for_teams_team_deleted', 'delete_buddypress_group_from_team', 10, 2);
 
 function delete_buddypress_group_from_team($team_id, $team_owner_id): void
 {
@@ -36,7 +36,7 @@ function delete_buddypress_group_from_team($team_id, $team_owner_id): void
 
 // When a Team is updated in the Teams for WooCommerce Memberships plugin, Update the BuddyPress Group with the same name
 
-add_action('team_updated', 'update_buddypress_group_from_team', 10, 2);
+add_action('wc_memberships_for_teams_team_updated', 'update_buddypress_group_from_team', 10, 2);
 
 function update_buddypress_group_from_team($team_id, $team_owner_id): void
 {
@@ -48,3 +48,4 @@ function update_buddypress_group_from_team($team_id, $team_owner_id): void
 	groups_update_groupmeta($group_id, 'team_id', $team_id);
 	groups_update_groupmeta($group_id, 'team_owner_id', $team_owner_id);
 }
+

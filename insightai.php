@@ -21,7 +21,8 @@ add_action('admin_enqueue_scripts', 'insightai_enqueue_assets');
 
 include(plugin_dir_path(__FILE__) . 'includes/shortcodes.php');
 
-// include the install file
+// include the admin menu file
 
-include(plugin_dir_path(__FILE__) . 'install.php');
+include(plugin_dir_path(__FILE__) . 'includes/admin/menu.php');
+
 
