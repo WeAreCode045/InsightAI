@@ -25,4 +25,11 @@ include(plugin_dir_path(__FILE__) . 'includes/shortcodes.php');
 
 include(plugin_dir_path(__FILE__) . 'includes/admin/menu.php');
 
+// include the admin settings file
 
+include(plugin_dir_path(__FILE__) . 'includes/admin/settings.php');
+
+// include the user relations file
+
+include(plugin_dir_path(__FILE__) . 'includes/user/relations.php');
+include(plugin_dir_path(__FILE__) . 'includes/verenigingen/relations.php');

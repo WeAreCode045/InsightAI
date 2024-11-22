@@ -2,7 +2,7 @@
 
 // ALL USER RELATIONS
 
-add_action('team_member_added', 'add_buddypress_group_member', 10, 2);
+add_action('wc_membership_created', 'add_buddypress_group_member', 10, 2);
 
 function add_buddypress_group_member($team_id, $team_member_id): void
 {
