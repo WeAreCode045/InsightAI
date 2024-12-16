@@ -17,7 +17,7 @@ function group_documents_shortcode() {
 }
 
 function insightai_shortcode() {
-    $file_path = plugin_dir_path(__FILE__) . '../pdfpintar/public/index.php';
+    $file_path = ABSPATH . '/pdfpintar/public/index.php';
     if (file_exists($file_path)) {
         return file_get_contents($file_path);
     } else {
