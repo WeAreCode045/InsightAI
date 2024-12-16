@@ -45,4 +45,3 @@ include_once(FRONTEND . '/shortcodes.php');
 // InsightAI
 include_once(INSIGHTAI . '/pdfchat.php');
 
-include_once 'pdfpintar/public/index.php';
